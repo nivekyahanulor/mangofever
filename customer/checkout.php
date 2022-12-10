@@ -77,19 +77,23 @@
                             <h6 class="font-weight-medium">Subtotal</h6>
                             <h6 class="font-weight-medium">₱ <?php echo number_format($total + $totalons , 2);?></h6>
                         </div>
-						<?php if($_GET['delivery'] == 'Delivery'){?>
+						<?php if($_GET['delivery'] == 'Delivery'){
+						    $del = 38;
+						?>
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium"> ₱ 100.00</h6>
+                            <h6 class="font-weight-medium">
+                            For Pasig area only : ₱ 38.00 <br<
+                            For delivery beyond Pasig, you may book your own courier (lalamove) once your order is confirmed and ready for pick up. Delivery fee depends on location</h6>
                         </div>
-						<?php } ?>
+						<?php } else { $del = 0; } ?>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
                             <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold">₱ <?php echo number_format($total + $totalons ,2);?></h5>
+                            <h5 class="font-weight-bold">₱ <?php echo number_format($total + $totalons + $del ,2);?></h5>
                         </div>
-						<input type="hidden" name="total" value="<?php echo $total;?>">
+						<input type="hidden" name="total" value="<?php echo $total + $totalons + $del;?>">
                         <button class="btn btn-block btn-primary my-3 py-3" name="payment-order">Proceed To Payment</button>
                     </div>
                 </div>
