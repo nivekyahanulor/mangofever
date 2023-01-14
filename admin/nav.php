@@ -79,6 +79,13 @@
                 <div data-i18n="Analytics">Products</div>
               </a>
             </li>
+			
+			<li class="menu-item <?php echo $materials;?>">
+              <a href="materials.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-package"></i>
+                <div data-i18n="Analytics">Materials</div>
+              </a>
+            </li>
 			<li class="menu-item <?php echo $reports;?>">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-chart"></i>
@@ -173,6 +180,8 @@
 					SYSTEM SETTINGS
 				<?php }   else if($page == "profile.php"){?>
 					PROFILE 
+				<?php }   else if($page == "materials.php"){?>
+					MATERIALS 
 				<?php } else if($page == "reports.php" || $page == 'sales.php'){?>
 					<?php echo strtoupper($_GET['data']);?> SALES REPORTS 
 				<?php } else if($page == "order-details.php"){?>

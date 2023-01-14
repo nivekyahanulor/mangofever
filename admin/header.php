@@ -40,6 +40,8 @@
             $index = 'active';
         }else if ($page == 'order.php') {
 			$order = 'active';
+		} else if ($page == 'materials.php') {
+			$materials = 'active';
          }else if ($page == 'timetable.php' || $page == 'order-details.php' ) {
             $timetable = 'active';
         }else if ($page == 'customer.php' || $page=="customer-record.php") {
