@@ -27,8 +27,8 @@
 					<?php if($valp->is_best_seller ==1){?>
 					 <div class="ribbon"><span>BEST SELLER</span></div>
 					<?php } ?>
-					<?php if($valp->is_hot ==1){?>
-					 <div class="ribbon"><span>HOT ITEM</span></div>
+					<?php if($valp->is_available ==1){?>
+					 <div class="ribbon"><span>Not Available</span></div>
 					<?php } ?>
                         <img class="i" src="admin/assets/menu/<?php echo $valp->image;?>" width="300px" height="300px">
                     </div>

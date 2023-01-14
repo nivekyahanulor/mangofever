@@ -65,7 +65,7 @@
             <div class="card-body">
 			<?php 
 			 if(isset($_GET['registered'])){
-				echo '<br> <div class="alert alert-success alert-dismissible fade show" role="alert"> <center><i class="bi  bi-exclamation-circle me-1"></i>SUCCESS! Verify your account to your email!<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+				echo '<br> <div class="alert alert-success alert-dismissible fade show" role="alert"> <center><i class="bi  bi-exclamation-circle me-1"></i>SUCCESS! <br> Please check your email to verify your account! <br> Thank You!<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 			 } if(isset($_GET['error'])){
 				echo '<br> <div class="alert alert-success alert-dismissible fade show" role="alert"> <center><i class="bi  bi-exclamation-circle me-1"></i>Error Login! Try Again!<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 			 } 

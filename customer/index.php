@@ -22,7 +22,13 @@
 			?>
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
                 <div class="card product-item border-0 mb-4">
-                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                   <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+					<?php if($valp->is_best_seller ==1){?>
+					 <div class="ribbon"><span>BEST SELLER</span></div>
+					<?php } ?>
+					<?php if($valp->is_available ==1){?>
+					 <div class="ribbon"><span>Not Available</span></div>
+					<?php } ?>
                         <img class="i" src="../admin/assets/menu/<?php echo $valp->image;?>" width="300px" height="300px">
                     </div>
                     <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">

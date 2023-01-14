@@ -69,7 +69,9 @@
             <div class="card-body">
 			<?php 
 			 if(isset($_GET['duplicate'])){
-				echo '<br> <div class="alert alert-warning alert-dismissible fade show" role="alert"> <center><i class="bi  bi-exclamation-circle me-1"></i> EMAIL ALREADY REGISTERED! <br> LOGIN USING YOUR ACCOUNT!<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+				echo '<br> <div class="alert alert-warning alert-dismissible fade show" role="alert"> <center><i class="bi  bi-exclamation-circle me-1"></i> EMAIL ALREADY REGISTERED!<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+			} if(isset($_GET['cduplicate'])){
+				echo '<br> <div class="alert alert-warning alert-dismissible fade show" role="alert"> <center><i class="bi  bi-exclamation-circle me-1"></i> CONTACT NUMBER ALREADY REGISTERED!<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 			} 
 			?>
              <center>
@@ -116,6 +118,39 @@
                     class="form-control"
                     name="contact"
                     placeholder="Contact Number"
+					 pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+					oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+					maxlength="11"
+					required
+                  />
+                </div> 
+				<div class="mb-3">
+                  <label for="email" class="form-label">City</label>
+                 <input
+                    type="text"
+                    class="form-control"
+                    name="city"
+                    placeholder="Enter City"
+					required
+                  />
+                </div> 
+				<div class="mb-3">
+                  <label for="email" class="form-label">Barangay</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    name="barangay"
+                    placeholder="Enter Barangay"
+					required
+                  />
+                </div> 
+				<div class="mb-3">
+                  <label for="email" class="form-label">Zip Code</label>
+					<input
+                    type="text"
+                    class="form-control"
+                    name="zipcode"
+                    placeholder="Enter Zip Code"
 					required
                   />
                 </div> 
@@ -136,6 +171,7 @@
                     class="form-control"
                     name="username"
                     placeholder="Enter username"
+					required
                     autofocus
                   />
                 </div>
@@ -152,6 +188,7 @@
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
+					  required
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>

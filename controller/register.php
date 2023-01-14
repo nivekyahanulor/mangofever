@@ -15,17 +15,29 @@ include('database.php');
 		$firstname    = $_POST['firstname'];
 		$lastname     = $_POST['lastname'];
 		$email        = $_POST['email'];
+		$zipcode      = $_POST['zipcode'];
+		$barangay     = $_POST['barangay'];
+		$city         = $_POST['city'];
 		$address      = $_POST['address'];
 		$contact 	  = $_POST['contact'];
 		$password     = $_POST['password'];
 		$username     = $_POST['username'];
 		$name         = $firstname .' '.$lastname;
+		
 		$check        = $mysqli->query("SELECT * from pos_customer where email='$email'");
 		$count        = $check->num_rows;
 		
 		if($count !=0){
 			echo "<script> window.location.href='../register.php?duplicate'; </script>";
 		} else {
+			
+			$check        = $mysqli->query("SELECT * from pos_customer where contact='$contact'");
+			$count        = $check->num_rows;
+			if($count !=0){
+				
+				echo "<script> window.location.href='../register.php?cduplicate'; </script>";
+			
+			} else { 
 			
 			$mail = new PHPMailer();
 			$mail->isSMTP();
@@ -56,9 +68,9 @@ include('database.php');
 				$message = 'failed';
 			}
 			
-		$mysqli->query("INSERT INTO pos_customer (firstname,lastname,email,address,contact,password,username) 
-								VALUES ('$firstname','$lastname','$email','$address','$contact','$password','$username')");
+		$mysqli->query("INSERT INTO pos_customer (firstname,lastname,email,address,city,barangay,zipcode,contact,password,username) 
+								VALUES ('$firstname','$lastname','$email','$address','$city','$barangay','$zipcode','$contact','$password','$username')");
 		echo "<script> window.location.href='../login.php?registered'; </script>";
-		
+	}
 	}
 	}

@@ -95,6 +95,18 @@
 							  <?php } ?>
 							  </select>
 							</div>
+							<div class="col-12" id="item-category">
+							  <label for="inputNanme4" class="form-label">Available: </label>
+							  <select class="form-control" name="is_available"  required>
+							  <?php if($val->is_available == 1){?>
+								<option value="0" > Yes </option>
+								<option value="1" selected> No </option>
+							  <?php } else { ?>
+								<option value="0" selected> Yes </option>
+								<option value="1" > No </option>
+							  <?php } ?>
+							  </select>
+							</div>
 							
 							<div class="col-12">
 							  <label for="inputNanme4" class="form-label"> Image: </label>

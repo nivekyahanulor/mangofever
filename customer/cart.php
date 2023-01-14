@@ -31,6 +31,7 @@
 							
 							$ons = 10;
 							$totalons  = (10 * $val->countons) * $val->qty;
+							$totalons1  += (10 * $val->countons) * $val->qty;
 						?>
 						<form method="post">
                         <tr>
@@ -82,14 +83,14 @@
                         </div>
                        <div class="d-flex justify-content-between mb-3 pt-1">
                             <h6 class="font-weight-medium">Add Ons</h6>
-                            <h6 class="font-weight-medium">₱ <?php echo number_format($totalons,2);?></h6>
+                            <h6 class="font-weight-medium">₱ <?php echo number_format($totalons1,2);?></h6>
                         </div>
                        
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
                             <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold">₱ <?php echo number_format($total + $totalons,2);?></h5>
+                            <h5 class="font-weight-bold">₱ <?php echo number_format($total + $totalons1,2);?></h5>
                         </div>
 						<input type="hidden" id="total" value="<?php echo $total;?>">
 						<input type="hidden" name="transcode" value="<?php echo $_SESSION['transcode'];?>">

@@ -61,8 +61,9 @@
 					<input type="hidden" value="<?php echo $_GET['id'];?>" name="id">
 					<input type="hidden" value="<?php echo $valp->item_id;?>" name="item_id">
 					<input type="hidden" value="<?php echo $_SESSION['id'];?>" name="customer_id">
-					
+					<?php if($valp->is_available==1){ echo "<font color=red><b> Item Not Available </b></font>"; } else { ?>
 						<button type="submit" class="btn btn-primary px-3"  name="add-order"><i class="fa fa-shopping-cart mr-1" ></i> Add To Cart</button>
+					<?php } ?>
                 </div>
 				</form>
                

@@ -86,7 +86,7 @@ if(isset($_POST['update-item'])){
 	$xl             = $_POST['xl'];
 	$xxl            = $_POST['xxl'];
 	$xxxl           = $_POST['xxxl'];
-	$is_hot         = $_POST['is_hot'];
+	$is_available   = $_POST['is_available'];
 	
 	if ($letter == "") {
 		$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
@@ -118,7 +118,7 @@ if(isset($_POST['update-item'])){
 										  xl                  = '$xl',
 										  xxl                 = '$xxl',
 										  xxxl                = '$xxxl',
-										  is_hot              = '$is_hot',
+										  is_available        = '$is_available',
 										  image               = '$location'
 					WHERE item_id = '$id'");
 

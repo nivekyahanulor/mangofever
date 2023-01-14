@@ -44,11 +44,11 @@
     overflow: hidden;
     width: 75px;
     height: 75px;
-    text-align: center;
-}
+	text-align: center;
+	}
 
     .ribbon span {
-        font-size: 10px;
+        font-size: 8px;
         color: #fff;
         text-transform: uppercase;
         text-align: center;
